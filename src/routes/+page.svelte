@@ -17,7 +17,7 @@
     label: string;
     items: string[];
   }
-
+  // Defines All Morph Target Categories and their items
   const MOVEMENT_CATEGORIES: Category[] = [
     { label: 'BeZier Curve Left',
       items: [ 'cbrow.center.up.L','cbrow.center.down.L','cbrow_inner_UP.L','cbrow_inner_down.L',],
@@ -77,13 +77,15 @@
 
 <div class="flex h-screen w-full flex-col overflow-hidden bg-background p-4 gap-4 md:flex-row">
   <main class="relative flex-1 flex flex-col border-2 border-border bg-card rounded-xl overflow-hidden shadow-sm">
-    <Canvas>
-      <Scene
-        faceSettings={$processedSettings}
-        playbackSpeed={$playbackSpeed}
-      />
-    </Canvas>
-  </main>
+  <Canvas>
+    <Scene
+      faceSettings={$processedSettings}
+      playbackSpeed={$playbackSpeed}
+      meshColor="rose-500"
+    />
+  </Canvas>
+</main>
+
 
   <!-- Slider Sidebar -->
   <aside class="z-50 flex h-[45vh] w-full flex-col border-2 border-border bg-card md:h-full md:w-80 rounded-xl shadow-sm">
@@ -150,3 +152,4 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
   :global(body) { font-family: 'Roboto Mono', monospace; }
 </style>
+
